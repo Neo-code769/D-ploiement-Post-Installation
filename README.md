@@ -39,20 +39,6 @@ Ce script PowerShell automatise entièrement la configuration post-déploiement 
 
 ---
 
-## 📁 Structure du Projet
-
-```
-📦 Post-Installation-Windows11/
-├── 📄 Deploiement-Script-Post-Installation.ps1  # Script principal
-├── 📄 PostInstallConfig.json                     # Fichier de configuration
-├── 📄 README.md                                  # Cette documentation
-└── 📁 Logs/                                      # Répertoire des journaux (auto-créé)
-    ├── Post-Install-Log-YYYY-MM-DD.txt
-    └── Post-Install-Transcript-YYYY-MM-DD-HH-mm-ss.txt
-```
-
----
-
 ## 🚀 Installation et Utilisation
 
 ### Prérequis Système
@@ -130,73 +116,69 @@ Le script installe automatiquement ces applications via Winget :
 - **🦊 Mozilla Firefox** - Navigateur alternatif  
 - **📦 7-Zip** - Gestionnaire d'archives
 - **📄 Adobe Acrobat Reader** - Lecteur PDF
-- **⚡ Microsoft PowerToys** - Outils système
-- **📝 Notepad++** - Éditeur de texte avancé
-- **💻 Visual Studio Code** - Éditeur de code
-- **🎬 VLC Media Player** - Lecteur multimédia
 
 ---
 
 ## 📊 Étapes d'Exécution Détaillées
 
 ### 🔄 Étape 0 : Configuration Initiale
-- ✅ Vérification des privilèges administrateur
-- ✅ Configuration de la politique d'exécution PowerShell
-- ✅ Initialisation du système de logging
-- ✅ Test de connectivité Internet
-- ✅ Configuration langue française (avec redémarrage si nécessaire)
-- ✅ Activation du plan d'alimentation "Hautes performances"
-- ✅ Nettoyage des applications préinstallées (bloatware)
+- Vérification des privilèges administrateur
+- Configuration de la politique d'exécution PowerShell
+- Initialisation du système de logging
+- Test de connectivité Internet
+- Configuration langue française (avec redémarrage si nécessaire)
+- Activation du plan d'alimentation "Hautes performances"
+- Nettoyage des applications préinstallées (bloatware)
 
 ### 💻 Étape 1 : Renommage du Poste
-- ✅ Lecture du nom actuel de l'ordinateur
-- ✅ Application du nouveau nom (configuration ou saisie)
-- ✅ Préparation du redémarrage pour appliquer les changements
+- Lecture du nom actuel de l'ordinateur
+- Application du nouveau nom (configuration ou saisie)
+- Préparation du redémarrage pour appliquer les changements
 
 ### 🏢 Étape 2 : Jonction au Domaine
-- ✅ Détection du mode domaine/groupe de travail
-- ✅ Demande des identifiants de domaine si nécessaire
-- ✅ Jonction automatique au domaine Active Directory
-- ✅ Mise à jour forcée des stratégies de groupe
+- Détection du mode domaine/groupe de travail
+- Demande des identifiants de domaine si nécessaire
+- Jonction automatique au domaine Active Directory
+- Mise à jour forcée des stratégies de groupe
 
 ### 👥 Étape 3 : Gestion des Utilisateurs
-- ✅ Création d'un compte administrateur local personnalisé
-- ✅ Attribution des droits administrateur
-- ✅ Configuration de la politique de mot de passe
+- Création d'un compte administrateur local personnalisé
+- Attribution des droits administrateur
+- Configuration de la politique de mot de passe
 
 ### ⏰ Étape 4 : Synchronisation Horaire
-- ✅ Démarrage du service de temps Windows (W32Time)
-- ✅ Synchronisation avec les serveurs de temps Microsoft
-- ✅ Vérification de la précision temporelle
+- Démarrage du service de temps Windows (W32Time)
+- Synchronisation avec les serveurs de temps Microsoft
+- Vérification de la précision temporelle
 
 ### 📦 Étape 5 : Installation de Logiciels
-- ✅ Vérification de la disponibilité de Winget
-- ✅ Installation silencieuse des applications définies
-- ✅ Gestion des erreurs et des dépendances
-- ✅ Rapport détaillé des installations réussies/échouées
+- Vérification de la disponibilité de Winget
+- Installation silencieuse des applications définies
+- Gestion des erreurs et des dépendances
+- Rapport détaillé des installations réussies/échouées
 
 ### 🖥️ Étape 6 : Bureau à Distance
-- ✅ Activation des règles de pare-feu pour RDP
-- ✅ Configuration du service Terminal Services
-- ✅ Activation de l'authentification au niveau réseau (sécurité)
+- Activation des règles de pare-feu pour RDP
+- Configuration du service Terminal Services
+- Activation de l'authentification au niveau réseau (sécurité)
 
 ### 📄 Étape 7 : Microsoft 365
-- ✅ Téléchargement de l'Office Deployment Tool officiel
-- ✅ Génération du fichier de configuration XML personnalisé
-- ✅ Installation silencieuse d'Office 365 en français
-- ✅ Configuration de l'activation automatique
+- Téléchargement de l'Office Deployment Tool officiel
+- Génération du fichier de configuration XML personnalisé
+- Installation silencieuse d'Office 365 en français
+- Configuration de l'activation automatique
 
 ### 🔄 Étape 8 : Mises à Jour Windows
-- ✅ Installation du module PSWindowsUpdate
-- ✅ Recherche des mises à jour disponibles
-- ✅ Installation automatique des correctifs système
-- ✅ Gestion du redémarrage différé
+- Installation du module PSWindowsUpdate
+- Recherche des mises à jour disponibles
+- Installation automatique des correctifs système
+- Gestion du redémarrage différé
 
 ### 🧹 Étape 9 : Nettoyage
-- ✅ Suppression des raccourcis inutiles du bureau
-- ✅ Nettoyage des fichiers temporaires d'installation
-- ✅ Suppression des fichiers de checkpoint
-- ✅ Optimisation de l'espace disque
+- Suppression des raccourcis inutiles du bureau
+- Nettoyage des fichiers temporaires d'installation
+- Suppression des fichiers de checkpoint
+- Optimisation de l'espace disque
 
 ---
 
@@ -331,25 +313,6 @@ function Step-CustomConfiguration {
     return $true
 }
 ```
-
----
-
-## 📞 Support et Contribution
-
-### 🐛 Signaler un Bug
-- Vérifier les logs dans `C:\Logs\`
-- Créer un rapport détaillé avec les messages d'erreur
-- Inclure la version du script et de Windows
-
-### 💡 Demander une Fonctionnalité
-- Décrire le besoin métier
-- Fournir des exemples d'usage
-- Expliquer la valeur ajoutée
-
-### 🤝 Contribuer au Code
-- Respecter le style de code PowerShell existant
-- Ajouter des commentaires pour les nouvelles fonctions
-- Tester sur différentes configurations Windows 11
 
 ---
 
