@@ -1,7 +1,49 @@
 {
-  "PCName": "PC-1234",
+  "_comment": "Configuration pour le script de post-installation Windows 11",
+  "_version": "2.0",
+  "_lastModified": "2025-09-26",
+  
+  "PCName": "WS-CORP-001",
+  
   "DomainJoin": true,
-  "DomainName": "mondomaine.local",
-  "LocalUserName": "Administrateur",
-  "LocalUserPassword": "MotDePasseSecurise123"
+  "DomainName": "contoso.local",
+  
+  "LocalUserName": "AdminLocal",
+  "LocalUserPassword": "P@ssw0rd123!Secure",
+  "_passwordNote": "ATTENTION: Changez ce mot de passe et sécurisez ce fichier",
+  
+  "Applications": [
+    "Google.Chrome",
+    "Mozilla.Firefox",
+    "7zip.7zip", 
+    "Adobe.Acrobat.Reader.64-bit",
+  ],
+  
+  "OfficeInstallation": {
+    "Enabled": true,
+    "Channel": "MonthlyEnterprise",
+    "Language": "fr-fr",
+    "ExcludedApps": ["Groove", "Lync", "Teams"]
+  },
+  
+  "WindowsUpdates": {
+    "Enabled": true,
+    "AutoReboot": false
+  },
+  
+  "RemoteDesktop": {
+    "Enabled": true,
+    "NetworkLevelAuthentication": true
+  },
+  
+  "PowerSettings": {
+    "PowerPlan": "HighPerformance",
+    "SleepTimeout": 0
+  },
+  
+  "CleanupSettings": {
+    "RemovePublicDesktopShortcuts": true,
+    "RemoveBloatware": true,
+    "CleanTempFiles": true
+  }
 }
