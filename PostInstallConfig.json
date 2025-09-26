@@ -1,16 +1,7 @@
-<<<<<<< HEAD
 {
   "PCName": "PC-1234",
   "DomainJoin": true,
   "DomainName": "mondomaine.local",
   "LocalUserName": "Administrateur",
   "LocalUserPassword": "MotDePasseSecurise123"
-=======
-{
-  "PCName": "PC-1234",
-  "DomainJoin": true,
-  "DomainName": "mondomaine.local",
-  "LocalUserName": "Administrateur",
-  "LocalUserPassword": "MotDePasseSecurise123"
->>>>>>> 1cc351c4901c903d4186d65132f8f271aaa5a269
 }
