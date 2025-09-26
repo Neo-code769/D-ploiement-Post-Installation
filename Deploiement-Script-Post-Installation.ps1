@@ -78,8 +78,8 @@ function Get-Checkpoint {
 
 # Fonction de nettoyage sécurisé du mot de passe
 function ConvertTo-SecurePassword {
-    param([string]$PlainPassword)
-    return ConvertTo-SecureString $PlainPassword -AsPlainText -Force
+    param([SecureString]$PlainPassword)
+    return $PlainPassword
 }
 
 # Fonction de test de connectivité Internet
